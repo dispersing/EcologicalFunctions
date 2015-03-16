@@ -34,7 +34,7 @@
 	curve(linear(N2 = x , delta = delta) , from = min , to = max , add = T ,  lwd = 2 , col = "#FF0000")
 	curve(linear(N2 = x , alpha = alpha)-linear(N2 = x , delta = delta) , from = min , to = max , xaxt = "n" , yaxt = "n" , xlab = "" , ylab = "" , lwd = 2 , col = "#FF00FF" , add = T)
 	abline(v = 0 , h = 0 , col = "#000000" , lwd = 2)
-	legend("topleft" , lwd = 2 , col = c("#0000FF" , "#FF0000" , "#FF00FF") , legend = c("benefit" , "cost" , "net effect") , bty = "n")
+	legend("topleft" , lwd = c(rep(1,3),NA) , pch = c(rep(NA,3),15) , pt.cex = c(1,1,1,2) , col = c("#0000FF" , "#FF0000" , "#FF00FF" , rgb(255,0,255,50,,255)) , legend = c("benefit (b)" , "cost (c)" , "net effect (ne)" , "b > c") , bty = "n" , seg.len = 1)
 
 	# B. NE lineraly increase
 	curve(linear(N2 = x , alpha = alpha) , type = "n" , from = min , to = max , xaxt = "n" , yaxt = "n" , xlab = "" , ylab = "" , lwd = 2 , col = "#0000FF" , yaxs = "i" , xaxs = "i" , frame = F)
