@@ -26,7 +26,7 @@
 	N.max <- 5
 ### plot ###
 	par(mfrow = c(1,1) , pin = c(3,3))
-	curve(logistic(X = X, Y = Y, b = b, d = d, N = x) , from = N.min , to = N.max , xlab = "N" , ylab = "")
+	curve(logistic(X = X, Y = Y, b = b, d = d, N = x) , from = N.min , to = N.max , xlab = "N" , ylab = "" , las = 1)
 	abline(h = 0 , v = 0)
 	abline(b,-X , lty = 2 , col = "#FF0000")
 	abline(d,Y , lty = 2 , col = "#0000FF")
