@@ -87,12 +87,12 @@
 	mtext(expression(over(a,2*b)) , side = 2 , at = a/2*b , las = 1 , line = 0.25)
 	mtext(expression(over(a,b)) , side = 2 , at = a/b , las = 1 , line = 0.25)
 	legend("topright" , legend = expression(f(x) == frac(a, b + x)) , bty = "n")
-	#michaelis-menton
-	michaelismenton <- function(a , b , x){
+	#michaelis-menten
+	michaelismenten <- function(a , b , x){
 		y <- (a*x)/(b + x)
 		}
-	curve(michaelismenton(a = a , b = b , x = x) , from = 0 , to = 20 , xaxt = "n" , xlab = "" , yaxt = "n" , ylab = "" , lwd = 2 , ylim = c(0,a) )
-	mtext("Michaelis-Menton (Holling type II)" , side = 3)
+	curve(michaelismenten(a = a , b = b , x = x) , from = 0 , to = 20 , xaxt = "n" , xlab = "" , yaxt = "n" , ylab = "" , lwd = 2 , ylim = c(0,a) )
+	mtext("Michaelis-Menten (Holling type II)" , side = 3)
 	abline(v = 0 , col = "grey")
 	abline(v = b , col = "grey" , lty = 2)
 	abline(h = c(a/2 , a) , col = "grey" , lty = 2)
